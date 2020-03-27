@@ -12,6 +12,6 @@ public class Application  {
     public static void main( String[] args ) {
     	
     	SpringApplication.run(Application.class, args);
-    	System.err.println(">>>>>>>>>>>>>>>>>>trans-api-test已经启动<<<<<<<<<<<<<<<<<<<<<<");
+    	System.err.println(">>>>>>>>>>>>>>>>>> trans-api-test启动成功 <<<<<<<<<<<<<<<<<<<<<<");
     }
 }

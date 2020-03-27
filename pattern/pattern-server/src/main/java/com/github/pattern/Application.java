@@ -17,7 +17,7 @@ public class Application {
 
 	public static void main(String[] args) {
 		 SpringApplication.run(Application.class, args);
-		 System.err.println(">>>>>>>>>>>>>>>>>>pattern-server已经启动<<<<<<<<<<<<<<<<<<<<<<");
+		 System.err.println(">>>>>>>>>>>>>>>>>> pattern-server启动成功 <<<<<<<<<<<<<<<<<<<<<<");
 
 	}
 

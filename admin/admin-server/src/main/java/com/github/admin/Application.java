@@ -16,6 +16,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class Application {
     public static void main( String[] args ){
         SpringApplication.run(Application.class, args);
-        System.err.println(">>>>>>>>>>>>>>>>>>admin-server已经启动<<<<<<<<<<<<<<<<<<<<<<");
+        System.err.println(">>>>>>>>>>>>>>>>>> admin-server启动成功 <<<<<<<<<<<<<<<<<<<<<<");
     }
 }

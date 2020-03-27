@@ -19,7 +19,7 @@ public class Application
     public static void main( String[] args ) {
     	
        SpringApplication.run(Application.class, args);
-       System.err.println(">>>>>>>>>>>>>>>>>>trans-server已经启动<<<<<<<<<<<<<<<<<<<<<<");
+       System.err.println(">>>>>>>>>>>>>>>>>> trans-server启动成功 <<<<<<<<<<<<<<<<<<<<<<");
         
     }
 }
