@@ -46,8 +46,8 @@ public class LoginController {
 
 	private static Logger logger = LoggerFactory.getLogger(LoginController.class);
 	 
-	@Autowired
-	private RedisUtils redisUtils;
+//	@Autowired
+//	private RedisUtils redisUtils;
 	
 	@Autowired
 	private UserServiceClient userServiceClient;
@@ -152,15 +152,14 @@ public class LoginController {
         User user = userModelResult.getModel();
 //        //将userId 存入session中
         String redisVal = JSONObject.toJSONString(user);
-        redisUtils.setEx(Constants.ADMIN_CURRENT_USER + user.getUserName(),redisVal, 60 * 60,TimeUnit.MINUTES);
-//        redisUtils.setEx(Constants.ADMIN_SERVER_SESSION + user.getUserName(),redisVal,60 * 60,TimeUnit.MINUTES);
+//        redisUtils.setEx(Constants.ADMIN_CURRENT_USER + user.getUserName(),redisVal, 60 * 60,TimeUnit.MINUTES);
         String shiroSessionKey = Constants.ADMIN_SERVER_SESSION + sessionId;
         logger.info("当前shiro session 的用户的shiroSessionKey = 【{}】,用户账号为userName = 【{}】",shiroSessionKey,userName);
         SecurityUtils.getSubject().getSession().setAttribute(shiroSessionKey,userName);
         
-        String userJSON = redisUtils.get(Constants.ADMIN_CURRENT_USER + userName);
+//        String userJSON = redisUtils.get(Constants.ADMIN_CURRENT_USER + userName);
         
-        logger.info("当前redis缓存用户信息:[{}]",userJSON);
+//        logger.info("当前redis缓存用户信息:[{}]",userJSON);
         customGenericManageableCaptchaService.removeCaptcha(request.getSession().getId());
         resultVo = new ResultVo();
         resultVo.setCode("1");

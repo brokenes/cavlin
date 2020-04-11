@@ -16,6 +16,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class Application {
     public static void main( String[] args ){
         SpringApplication.run(Application.class, args);
-        System.err.println(">>>>>>>>>>>>>>>>>> admin-server启动成功 <<<<<<<<<<<<<<<<<<<<<<");
+        long startTime = System.nanoTime();
+        System.err.println(">>>>>>>>>>>>>>>>>> admin-server启动成功 <<<<<<<<<<<<<<<<<<<<<<" + startTime);
+       
     }
 }
